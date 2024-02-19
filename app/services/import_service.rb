@@ -1,3 +1,4 @@
+# This file needs to be checked
 class ImportService
   def initialize(weather_service = WeatherService.new)
     @weather_service = weather_service

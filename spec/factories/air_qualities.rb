@@ -1,3 +1,4 @@
+# This file needs to be checked
 FactoryBot.define do
   factory :air_quality do
     association :location

@@ -1,3 +1,4 @@
+# This file needs to be checked
 FactoryBot.define do
   factory :location do
     name { Faker::Address.city }

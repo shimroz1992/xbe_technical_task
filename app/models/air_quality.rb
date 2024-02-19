@@ -1,3 +1,4 @@
+# This file needs to be checked
 class AirQuality < ApplicationRecord
   belongs_to :location
 

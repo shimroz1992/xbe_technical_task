@@ -1,3 +1,4 @@
+# This file needs to be checked
 Rswag::Ui.configure do |c|
 
   # List the Swagger endpoints that you want to be documented through the
