@@ -24,30 +24,40 @@ This project implements an API for managing locations and their associated air q
 
     `rails db:seed`
 
-    Run the Server:  
+5. ### Run the Server:  
 
     `rails s`   
 
-5. ### Sample Test Cases:  
-  Test that the Location model is valid with correct latitude and longitude values.
+6. ### Sample Test Cases:  
+  	Test that the Location model is valid with correct latitude and longitude values.
 
-Test that the WeatherService fetches air pollution data successfully for a given location.  
+	Test that the WeatherService fetches air pollution data successfully for a given location.  
 
-Test that the AirQualityImporter parses and saves the fetched air quality data correctly.  
+	Test that the AirQualityImporter parses and saves the fetched air quality data correctly.  
 
-Test that the scheduled task runs successfully and imports air quality data periodically.      
+	Test that the scheduled task runs successfully and imports air quality data periodically.      
 
-## Execution:  
-Run RSpec tests:
+	## Execution:  
+	Run RSpec tests:
 
-`bundle exec rspec`
+	`bundle exec rspec`
 
-rubocop tests:
+	rubocop tests:
 
-`rubocop` or `rubocop -A`
+	`rubocop` or `rubocop -A`
 
-6. ### Swagger Documentation:
-Access the Swagger documentation for the API: `http://localhost:3000/api-docs/index.html`    
+7. ### Swagger Documentation:
+	Access the Swagger documentation for the API: `http://localhost:3000/api-docs/index.html`
 
+8. Here you can find we are fetching and storing the historical air pollution data for every location for one year without crashing application.
+   ![seed_data](https://github.com/shimroz1992/xbe_technical_task/assets/16288470/af51b854-a827-4e96-b03a-7574f22f189b)
 
-Thank you for taking the time to explore this repository! Your feedback and contributions are highly appreciated. If you have any questions, suggestions, or encounter any issues, please don't hesitate to open an issue or reach out to us. Together, let's make this project even better!
+9. Below is attached screenshots of swaggers documentation.   
+   ![endpoint_1](https://github.com/shimroz1992/xbe_technical_task/assets/16288470/43254100-ab2e-4b21-a652-6b2382c877a7)
+   
+   ![endpoint_2](https://github.com/shimroz1992/xbe_technical_task/assets/16288470/d8d4335b-eac2-4fb7-b531-ea13db40be2a)
+   
+   ![endpoint_3](https://github.com/shimroz1992/xbe_technical_task/assets/16288470/bf56c459-2402-4ccf-a97b-67befc4bb6aa)
+   
+
+	Thank you for taking the time to explore this repository! Your feedback and contributions are highly appreciated. If you have any questions, suggestions, or encounter any issues, please don't hesitate to open an issue or reach out to us. Together, let's make this project even better!
