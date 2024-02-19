@@ -1,24 +1,53 @@
-# README
+# xbe_technical_task
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
+This project implements an API for managing locations and their associated air qualities.
 
-Things you may want to cover:
+## Prerequisites
+- Ruby (version 2.7.5)
+- Bundler
+- OpenWeatherMap API key (`OPENWEATHERMAP_API_KEY`)
 
-* Ruby version
+## Installation
+1. ### Clone the repository:
+   ```bash
+   git clone https://github.com/shimroz1992/xbe_technical_task
 
-* System dependencies
+2. ### Install dependencies:
+   
+   `bundle install`   
+3. ### Set up the database:
 
-* Configuration
+   `rails db:create`  
+   `rails db:migrate`    
+4. ### Seed the database with initial data:
 
-* Database creation
+    `rails db:seed`
 
-* Database initialization
+    Run the Server:  
 
-* How to run the test suite
+    `rails s`   
 
-* Services (job queues, cache servers, search engines, etc.)
+5. ### Sample Test Cases:  
+  Test that the Location model is valid with correct latitude and longitude values.
 
-* Deployment instructions
+Test that the WeatherService fetches air pollution data successfully for a given location.  
 
-* ...
+Test that the AirQualityImporter parses and saves the fetched air quality data correctly.  
+
+Test that the scheduled task runs successfully and imports air quality data periodically.      
+
+## Execution:  
+Run RSpec tests:
+
+`bundle exec rspec`
+
+rubocop tests:
+
+`rubocop` or `rubocop -A`
+
+6. ### Swagger Documentation:
+Access the Swagger documentation for the API: `http://localhost:3000/api-docs/index.html`    
+
+
+Thank you for taking the time to explore this repository! Your feedback and contributions are highly appreciated. If you have any questions, suggestions, or encounter any issues, please don't hesitate to open an issue or reach out to us. Together, let's make this project even better!
