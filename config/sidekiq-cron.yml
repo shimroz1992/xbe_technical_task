@@ -1,0 +1,4 @@
+hourly_importer_job:
+  cron: '*/5 * * * *'
+  class: 'PollutionImportJob'
+  queue: 'default'
