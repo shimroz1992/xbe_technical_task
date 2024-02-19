@@ -1,3 +1,4 @@
+# This file needs to be checked
 locations_data = [
   { name: 'Mumbai', latitude: 19.0760, longitude: 72.8777 },
   { name: 'Delhi', latitude: 28.6139, longitude: 77.2090 },
