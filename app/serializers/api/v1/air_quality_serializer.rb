@@ -1,3 +1,4 @@
+# This file needs to be checked
 module Api
   module V1
     class AirQualitySerializer < ActiveModel::Serializer

@@ -1,3 +1,4 @@
+# This file needs to be checked
 # frozen_string_literal: true
 
 require 'rails_helper'

@@ -1,3 +1,4 @@
+# This file needs to be checked
 require 'rails_helper'
 
 RSpec.describe Api::V1::LocationsController, type: :controller do

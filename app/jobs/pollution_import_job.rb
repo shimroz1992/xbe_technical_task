@@ -1,3 +1,4 @@
+# This file needs to be checked
 class PollutionImportJob < ApplicationJob
   queue_as :default
 
