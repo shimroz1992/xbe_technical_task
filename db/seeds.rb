@@ -21,12 +21,27 @@ locations_data = [
   { name: 'Ludhiana', latitude: 30.9010, longitude: 75.8573 }
 ]
 
-locations_data.each do |location|
-  Location.create!(location)
+# Create locations in bulk
+Location.create!(locations_data)
+
+# Fetch historical data for all locations in one go
+Location.includes(:air_qualities).find_each do |location|
   start_date = "Mon, 19 Feb 2023 18:02:13 +0530"
   end_date = "Mon, 19 Feb 2024 18:02:13 +0530"
-  latitude = location[:latitude]
-  longitude = location[:longitude]
+  latitude = location.latitude
+  longitude = location.longitude
   historical_data = WeatherService.new.fetch_historical_air_quality(latitude, longitude, start_date, end_date)
-  ImportService.new.send(:create_air_quality, location, historical_data)
+
+  # Prepare air quality attributes for bulk creation
+  air_quality_attrs = historical_data["list"].map do |air_quality_data|
+    {
+      aqi: air_quality_data.dig('main', 'aqi'),
+      pollutant_concentrations: air_quality_data.dig('components'),
+      timestamp: Time.at(air_quality_data.dig('dt')),
+      location_id: location.id
+    }
+  end
+
+  # Create air qualities in bulk for the current location
+  AirQuality.create!(air_quality_attrs)
 end
